@@ -331,7 +331,7 @@ When bar returns, the stack is empty.
  - onSubmit etc...
 + If we want to bind the function to component in the constructor we have to bind the function .In ES6 it may be don't need
 
-  ```
+```
  constructor(props) {
          super();
         //  this.submit=this.submit.bind(this);
@@ -341,7 +341,7 @@ When bar returns, the stack is empty.
       console.log("inconstructor")
      }
 
-  ```
+```
 
 + Inline binding
 
@@ -540,7 +540,7 @@ const EnhancedComponent = higherOrderComponent(WrappedComponent);
   - compose function takes inputs functions arguments and returns a result as function
   - first it will reads value for last function in the compose, then result will be passed to second that result willl passed to the first one finally we compose all the three functions and give result
   - for the compose `reduceRight` function we have to use .It will compose from right to left
-  - If you want to do compose left to right `reduce` function we ave to use
+  - If you want to do compose left to right `reduce` function we have to use
 
   ```
   const result=compose(first,second,third)
