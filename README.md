@@ -224,13 +224,14 @@ ReactJS Interview Questions:
   - `fetch`
   - `axios`
 
-  ```
+ ```
   fetch('https://api.github.com/users').then(response=>response.json()).
  then(data=> console.log(data))
 
  axios.get('https://api.github.com/users').then(
    result => console.log(result.data)
 )
+
 ```
 
 + Async/await
@@ -329,6 +330,7 @@ When bar returns, the stack is empty.
  - onClick
  - onSubmit etc...
 + If we want to bind the function to component in the constructor we have to bind the function .In ES6 it may be don't need
+
   ```
  constructor(props) {
          super();
@@ -338,6 +340,7 @@ When bar returns, the stack is empty.
          }
       console.log("inconstructor")
      }
+
   ```
 
 + Inline binding
@@ -352,10 +355,12 @@ When bar returns, the stack is empty.
       </>
     )
   }
+
 ```
 + When we use arrow function no need to use `bind()`
 
 + conditional rendering
+
 ```
 {this.state.user && <h1>{this.state.username}</h1>}
 
@@ -396,6 +401,7 @@ When bar returns, the stack is empty.
   - The next() method must return an object with two properties:
      - value (the next value)
      - done (true or false)`
+
 ```
 function myNumbers() {
   let n = 0;
@@ -413,6 +419,7 @@ const n = myNumbers();
 n.next(); // Returns 10
 n.next(); // Returns 20
 n.next(); // Returns 30
+
 ```
 
 + Generators
@@ -437,6 +444,7 @@ let generator = generateSequence();
 let one = generator.next();
 
 alert(JSON.stringify(one)); 
+
 ```
 
 ##### Pure Functions & Higher Order Functions
@@ -478,6 +486,7 @@ fn(); // logs 'Hi' in the console
 
 // Alternatively - A bit odd syntax but good to know
 returnFunc()(); // logs 'Hi' in the console
+
 ```
 
 
@@ -491,8 +500,10 @@ returnFunc()(); // logs 'Hi' in the console
 + a higher-order component is a function that takes a component and returns a new component.
 
 + code reusability is main advantage
+
 ```
 const EnhancedComponent = higherOrderComponent(WrappedComponent);
+
 ```
 
 ### Unacademy interview questions
@@ -530,9 +541,11 @@ const EnhancedComponent = higherOrderComponent(WrappedComponent);
   - first it will reads value for last function in the compose, then result will be passed to second that result willl passed to the first one finally we compose all the three functions and give result
   - for the compose `reduceRight` function we have to use .It will compose from right to left
   - If you want to do compose left to right `reduce` function we ave to use
+
   ```
   const result=compose(first,second,third)
   result(value)
+
   ```
 
 6. Implement Promise.all
